@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 import {
   FooterContainer,
   FooterWrap,
@@ -23,6 +24,10 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <FooterContainer>
       <FooterWrap>
@@ -30,11 +35,11 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItem>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/sign-in">Awards</FooterLink>
-              <FooterLink to="/sign-in">Certifications</FooterLink>
-              <FooterLink to="/sign-in">Reviews</FooterLink>
-              <FooterLink to="/sign-in">Brands</FooterLink>
-              <FooterLink to="/sign-in">Terms of Service</FooterLink>
+              <FooterLink to="/">Awards</FooterLink>
+              <FooterLink to="/">Certifications</FooterLink>
+              <FooterLink to="/">Reviews</FooterLink>
+              <FooterLink to="/">Brands</FooterLink>
+              <FooterLink to="/">Terms of Service</FooterLink>
             </FooterLinkItem>
             <FooterLinkItem>
               <FooterLinkTitle>Quick Links</FooterLinkTitle>
@@ -64,7 +69,9 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">DigiVault</SocialLogo>
+            <SocialLogo to="/" onClick={toggleHome}>
+              DigiVault
+            </SocialLogo>
             <WebsiteRights>
               DigiVault &trade; {new Date().getFullYear()} Registered TradeMark.
             </WebsiteRights>
