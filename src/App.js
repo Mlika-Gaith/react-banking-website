@@ -1,11 +1,15 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages";
+import Signin from "./pages/signin";
 
 function App() {
   return (
     <Router>
-      <Home />
+      <Routes>
+        <Route path="/" Component={Home} exact />
+        <Route path="/sign-in" Component={Signin} exact />
+      </Routes>
     </Router>
   );
 }
