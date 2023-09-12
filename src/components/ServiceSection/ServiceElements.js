@@ -45,6 +45,7 @@ export const ServiceCard = styled.div`
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 2px solid #256bef;
 
   @media screen and (max-width: 684px) {
     max-width: 300px;
@@ -57,12 +58,13 @@ export const ServiceCard = styled.div`
 
 export const ServiceIcon = styled.img`
   grid-area: col1;
-  height: 340px;
-  width: 340px;
+  height: 320px;
+  width: 320px;
   object-fit: cover;
   @media screen and (max-width: 684px) {
-    max-height: 250px;
-    max-width: 250px;
+    justify-self: start;
+    max-height: 180px;
+    max-width: 180px;
   }
 `;
 
