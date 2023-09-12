@@ -2,60 +2,81 @@ import { styled } from "styled-components";
 
 export const ServicesContainer = styled.div`
   height: 800px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #010606;
-  @media screen and (max-width: 768px) {
-    height: 1100px;
-  }
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    height: 700px;
   }
 `;
 
 export const ServicesWrapper = styled.div`
   max-width: 1000px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  grid-gap: 16px;
   padding: 0 50px;
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
     padding: 0 20px;
   }
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 0 10px;
   }
 `;
 
 export const ServiceCard = styled.div`
   background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  width: 650px;
+  height: 450px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "col1 col2"
+    "col1 col2";
   align-items: center;
+  justify-items: center;
   border-radius: 10px;
-  max-height: 360px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
 
-  &:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+  @media screen and (max-width: 684px) {
+    max-width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "col1"
+      "col2";
   }
 `;
 
 export const ServiceIcon = styled.img`
-  height: 180px;
-  width: 180px;
-  margin-bottom: 10px;
+  grid-area: col1;
+  height: 340px;
+  width: 340px;
+  object-fit: cover;
+  @media screen and (max-width: 684px) {
+    max-height: 250px;
+    max-width: 250px;
+  }
+`;
+
+export const ServiceDescriptionWrapper = styled.div`
+  grid-area: col2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  @media screen and (max-width: 684px) {
+    justify-self: start;
+    width: 250px;
+  }
 `;
 
 export const ServicesH1 = styled.h1`
@@ -69,11 +90,21 @@ export const ServicesH1 = styled.h1`
 `;
 
 export const ServiceH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
+  text-align: justify;
+  word-spacing: 1px;
+  hyphens: auto;
+  @media screen and (max-width: 684px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const ServiceP = styled.p`
-  font-size: 1rem;
-  text-align: center;
+  font-size: 1.1rem;
+  text-align: justify;
+  hyphens: auto;
+  @media screen and (max-width: 684px) {
+    font-size: 1rem;
+  }
 `;

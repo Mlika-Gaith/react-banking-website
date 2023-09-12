@@ -8,6 +8,7 @@ export const serviceCardData = [
       "Our users can make transactions from anywhere with an internet connection, 24/7. Whether they're at home, in a store, or traveling.",
     image: image1,
   },
+
   {
     title: "Record-Keeping",
     description:
