@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  react_app:
+    image: ghaithmlika/react-banking-website:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=prosuction
