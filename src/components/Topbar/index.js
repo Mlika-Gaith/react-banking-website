@@ -32,7 +32,7 @@ const Topbar = ({ isOpen, toggle }) => {
           </TopbarLink>
         </TopbarMenu>
         <TopBtnWrap>
-          <TopbarRoute to="/signin">Sign In</TopbarRoute>
+          <TopbarRoute to="/sign-in">Sign In</TopbarRoute>
         </TopBtnWrap>
       </TopbarWrapper>
     </TopbarContainer>
