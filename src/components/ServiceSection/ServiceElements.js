@@ -42,10 +42,10 @@ export const ServiceCard = styled.div`
     "col1 col2";
   align-items: center;
   justify-items: center;
-  border-radius: 10px;
+  border-radius: 3px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border: 2px solid #256bef;
+  border: 2px solid #101522;
 
   @media screen and (max-width: 684px) {
     max-width: 300px;

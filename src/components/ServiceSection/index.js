@@ -18,8 +18,8 @@ const Services = () => {
       <ServicesWrapper>
         <ScrollCarousel
           autoplay
-          autoplaySpeed={0.2}
-          speed={10}
+          autoplaySpeed={0.1}
+          speed={5}
           onReady={() => console.log("I am ready")}
         >
           {serviceCardData.map((item, index) => {
